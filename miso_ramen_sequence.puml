@@ -1,0 +1,229 @@
+// filepath: c:\Development\WhatsForDinner\miso_ramen_sequence.puml
+@startuml
+' Make all lines and text dark blue (no black)
+skinparam defaultFontColor #001f5b
+skinparam titleFontColor #001f5b
+skinparam participantFontColor #001f5b
+skinparam noteFontColor #001f5b
+
+skinparam participantBorderColor #001f5b
+skinparam participantBackgroundColor White
+skinparam noteBorderColor #001f5b
+skinparam noteBackgroundColor White
+
+skinparam arrowColor #001f5b
+skinparam sequenceArrowColor #001f5b
+
+title Miso Ramen - Station Sequence Diagram (Stations as Actors)
+
+participant Refrigerator
+participant PrepBoard
+participant Skillet
+participant Pot
+participant Hob
+participant Bowl
+participant Strainer
+participant Table
+
+== Morning prep: Chashu (pork belly) ==
+note over Refrigerator,Pot #FFF9E6
+T: 00:00:00
+
+Ingredients (with measures):
+- Pork belly: 500 g (rolled or flat slab)
+- Garlic: 2–3 cloves
+- Ginger: 20–30 g (thumb-sized piece)
+- Spring onions: 1–2 stalks
+- Soy sauce: 120 ml
+- Sake (or dry sherry): 100 ml
+- Sugar: 1–2 Tbsp
+- Water/stock: 250–300 ml (enough to half-submerge pork)
+- Miso: 1 Tbsp (optional for depth)
+- Sesame seeds/oil: 1 tsp (optional)
+end note
+
+note over Refrigerator,Pot #E0F7FF
+Equipment:
+- Refrigerator
+- PrepBoard + knife
+- Skillet (cast iron optional)
+- Pot with lid
+- Hob (stovetop)
+- Measuring jug / spoons
+- Tongs or spatula
+end note
+
+Refrigerator -> PrepBoard: Move pork belly and aromatics out\nT: 00:00:00, 00:00:30, M:500 g pork belly + aromatics, A: , E:
+PrepBoard -> PrepBoard: Trim pork belly (if needed)\nT: 00:00:30, 00:01:00, M:500 g pork belly, A:carefully, E:
+PrepBoard -> Skillet: Transfer pork belly to skillet\nT: 00:01:30, 00:00:20, M:1 piece, A: , E:
+Skillet -> Hob: Sear pork belly on all sides\nT: 00:01:50, 00:05:00, M:1 piece, A:evenly, E:cast iron optional
+Hob --> Skillet: Pork belly browned\nT: 00:06:50, 00:00:10, M:surface browned, A: , E:
+PrepBoard -> Pot: Add garlic, ginger, spring onion\nT: 00:07:00, 00:00:40, M:aromatics for braise, A:finely minced, E:
+Skillet -> Pot: Move seared pork belly to pot\nT: 00:07:40, 00:00:20, M:1 piece, A: , E:
+Pot -> Pot: Add soy, sake, sugar, water, miso, sesame (braising liquid)\nT: 00:08:00, 00:01:00, M:~600 ml liquid, A:thoroughly mixed, E:
+Pot -> Hob: Simmer on low heat (1–1.5 hours)\nT: 00:09:00, 01:15:00, M:low simmer, A:slowly, E:lid on
+Hob --> Pot: Braised chashu complete\nT: 01:24:00, 00:00:10, M:tender pork, A: , E:
+Pot -> Refrigerator: Cool and store chashu in braising liquid\nT: 01:24:10, 00:30:00, M:pot + liquid, A:cooled, E:refrigerate covered
+
+== Morning prep: Ramen eggs (ajitsuke tamago) ==
+note over Refrigerator,Bowl #FFF9E6
+T: 01:54:10
+
+Ingredients (with measures):
+- Eggs: 4–6 large
+- Water: 1.5–2 L for boiling
+- Ice bath: ~1 L water + ice
+- Soy sauce: 50 ml
+- Sake or mirin: 25 ml (or 1 tsp sugar)
+- Water for marinade: 50–75 ml
+- Optional: 1–2 Tbsp chashu braising liquid
+end note
+
+note over Refrigerator,Bowl #E0F7FF
+Equipment:
+- Refrigerator
+- Pot (1.5–3 L) for boiling eggs
+- Hob
+- Bowl for ice bath
+- PrepBoard + spoon
+- Small bowl or zip bag for marinade
+- Timer
+end note
+
+Refrigerator -> Pot: Move eggs and water for boiling\nT: 01:54:10, 00:00:20, M:4–6 eggs, A: , E:
+Pot -> Hob: Boil eggs 6–7 minutes\nT: 01:54:30, 00:07:00, M:boiling water, A:gently, E:timer
+Hob --> Pot: Eggs boiled\nT: 02:01:30, 00:00:10, M:set whites, jammy yolks, A: , E:
+Pot -> Bowl: Transfer eggs into cold water\nT: 02:01:40, 00:00:20, M:ice bath, A:rapidly cooled, E:
+Bowl -> PrepBoard: Eggs ready to peel\nT: 02:02:00, 00:00:10, M:4–6 eggs, A: , E:
+PrepBoard -> PrepBoard: Peel eggs\nT: 02:02:10, 00:02:00, M:4–6 eggs, A:carefully, E:
+PrepBoard -> Bowl: Place peeled eggs in marinade\nT: 02:04:10, 00:00:20, M:eggs, A:fully submerged, E:small bowl/bag
+Pot -> Bowl: Add marinade (soy, water, sake/sugar or chashu liquid)\nT: 02:04:30, 00:00:30, M:enough to cover, A:well mixed, E:
+Bowl -> Refrigerator: Store marinating eggs\nT: 02:05:00, 06:00:00, M:marinate, A:slowly, E:fridge
+
+== Evening: Toppings prep ==
+note over Refrigerator,PrepBoard #FFF9E6
+T: 08:05:00
+
+Ingredients (with measures):
+- Braised chashu: 200–250 g (4–6 slices)
+- Marinated ramen eggs: 2 (for 2 servings)
+- Spring onions / negi: 1 stalk
+- Narutomaki: 4–6 slices (~30 g)
+- Menma: 30–50 g
+- Corn: 40–60 g (2–3 Tbsp)
+- Bean sprouts: 50–75 g (handful)
+- Nori sheets: 1 sheet, cut into quarters
+- Optional: Pickled ginger: 10–15 g
+- Optional: Chili oil: a few drops
+end note
+
+note over Refrigerator,PrepBoard #E0F7FF
+Equipment:
+- Refrigerator
+- PrepBoard + sharp knife
+- Small bowls / ramekins for toppings
+- Tongs or chopsticks
+end note
+
+Refrigerator -> PrepBoard: Retrieve chashu, eggs, vegetables, narutomaki, menma\nT: 08:05:00, 00:00:30, M:toppings set, A: , E:
+PrepBoard -> PrepBoard: Slice chashu, spring onions, narutomaki\nT: 08:05:30, 00:05:00, M:various toppings, A:thinly, E:sharp knife
+PrepBoard -> Bowl: Portion toppings into small bowls\nT: 08:10:30, 00:00:40, M:topping bowls, A:neatly, E:
+Bowl -> Refrigerator: Hold toppings chilled until assembly\nT: 08:11:10, 00:00:10, M:prepared toppings, A: , E:fridge
+
+== Evening: Miso ramen broth ==
+note over Refrigerator,Pot #FFF9E6
+T: 19:15:00
+
+Ingredients (with measures):
+- Garlic: 2 cloves (minced)
+- Ginger: 10–15 g (minced)
+- Shallot: 1 small (~30 g)
+- Ground pork (or mushrooms): 100–120 g
+- Dark roasted sesame oil: 1 Tbsp
+- Doubanjiang: 1 tsp
+- Miso: 3 Tbsp
+- Toasted sesame seeds: 1 Tbsp
+- Sugar: 1 Tbsp
+- Sake: 1 Tbsp
+- Chicken stock: 900–1000 ml (4 cups)
+- Salt (Diamond Crystal): 1 tsp (to taste)
+- White pepper: ¼ tsp
+end note
+
+note over Refrigerator,Pot #E0F7FF
+Equipment:
+- Refrigerator
+- PrepBoard + knife
+- Pot (medium)
+- Hob
+- Wooden spoon / spatula
+- Measuring spoons / jug
+end note
+
+Refrigerator -> PrepBoard: Move garlic, ginger, shallot\nT: 19:15:00, 00:00:20, M:broth aromatics, A: , E:
+PrepBoard -> PrepBoard: Mince garlic, ginger, shallot\nT: 19:15:20, 00:01:00, M:aromatics, A:finely, E:
+PrepBoard -> Pot: Add aromatics and ground pork (or mushrooms)\nT: 19:16:20, 00:00:30, M:~115 g ground pork, A: , E:
+Pot -> Hob: Saute in sesame oil\nT: 19:16:50, 00:03:00, M:aromatics + meat, A:until fragrant, E:medium heat
+Hob --> Pot: Aromatics fragrant and pork cooked\nT: 19:19:50, 00:00:10, M:light browning, A: , E:
+Pot -> Pot: Add doubanjiang, miso, sesame seeds, sugar, sake\nT: 19:20:00, 00:01:00, M:soup base, A:thoroughly combined, E:
+Pot -> Pot: Add chicken stock / broth\nT: 19:21:00, 00:00:20, M:~4 cups stock, A: , E:
+Pot -> Hob: Simmer broth; adjust salt and white pepper\nT: 19:21:20, 00:05:00, M:gentle simmer, A:tasted and adjusted, E:low heat
+
+== Evening: Noodles ==
+note over Pot,Strainer #FFF9E6
+T: 19:26:20
+
+Ingredients (with measures):
+- Ramen noodles: 2 servings (280–340 g fresh OR 180 g dried)
+- Water for boiling: 2–3 L
+- Optional: pinch of salt
+end note
+
+note over Pot,Strainer #E0F7FF
+Equipment:
+- Pot (for noodle water)
+- Hob
+- Strainer / colander
+- Tongs or chopsticks
+- Timer
+end note
+
+Pot -> Hob: Boil water for noodles (separate pot)\nT: 19:26:20, 00:03:00, M:large pot water, A:rapid boil, E:
+Refrigerator -> PrepBoard: Retrieve noodles\nT: 19:29:20, 00:00:20, M:2 servings noodles, A: , E:
+PrepBoard -> Pot: Add noodles to boiling water\nT: 19:29:40, 00:00:10, M:2 portions, A:loosened, E:
+Pot -> Hob: Cook noodles until al dente\nT: 19:29:50, 00:02:00, M:al dente, A:stir occasionally, E:timer
+Pot -> Strainer: Drain noodles\nT: 19:31:50, 00:00:20, M:drained noodles, A:well shaken, E:colander/strainer
+
+== Assembly at serving time ==
+note over Bowl,Table #FFF9E6
+T: 19:32:10
+
+Ingredients (with measures):
+- Cooked noodles: 1 portion per bowl
+- Hot miso broth: 350–450 ml per bowl
+- Chashu: 2–3 slices per bowl (~80–100 g)
+- Ramen eggs: 1 each (halved)
+- Corn: 1 Tbsp (20–30 g)
+- Menma: 1 Tbsp (15–20 g)
+- Narutomaki: 2–3 slices (~15 g)
+- Spring onion: 1–2 Tbsp (sliced)
+- Nori: 1 quarter sheet
+- Optional: chili oil (2–3 drops), pickled ginger (5–10 g), white pepper
+end note
+
+note over Bowl,Table #E0F7FF
+Equipment:
+- Serving bowls
+- Ladle
+- Tongs or chopsticks
+- Table / tray
+end note
+
+Bowl -> Bowl: Warm serving bowls with hot water, then discard\nT: 19:32:10, 00:00:20, M:2 bowls, A:preheated, E:
+Strainer -> Bowl: Place noodles into serving bowls\nT: 19:32:30, 00:00:10, M:1 portion/bowl, A:evenly, E:
+Pot -> Bowl: Ladle hot miso broth over noodles\nT: 19:32:40, 00:00:20, M:enough to cover, A:gently, E:ladle
+Refrigerator -> Bowl: Add chashu slices and ramen eggs\nT: 19:33:00, 00:00:30, M:2–3 slices + 1 egg, A:arranged neatly, E:
+Bowl -> Bowl: Add toppings (corn, menma, narutomaki, negi, nori)\nT: 19:33:30, 00:01:00, M:toppings set, A:visually balanced, E:tongs/chopsticks
+Bowl -> Table: Serve ramen to diners\nT: 19:34:30, 00:00:10, M:2 bowls, A:immediately, E:tray optional
+
+@enduml

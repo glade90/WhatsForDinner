@@ -1,0 +1,152 @@
+@startuml
+title Mediterranean Vegetarian Stuffed Bell Peppers - Station Sequence Diagram (Stations as Actors)
+
+participant Refrigerator
+participant Pantry
+participant PrepBoard
+participant Skillet
+participant Pot
+participant Hob
+participant Oven
+participant Kettle
+participant Bowl
+participant Strainer
+participant Table
+
+== Setup + Cook Quinoa ==
+note over Table #FFF9E6
+T: 00:00:00
+Ingredients (with measures):
+- Quinoa: ~170 g (1 cup uncooked)
+- Water: ~360 ml (for cooking quinoa)
+- Salt: optional pinch (~1 g)
+end note
+note over Table #E0F7FF
+Equipment:
+- Pantry
+- Kettle
+- Pot
+- Hob
+- Strainer
+- Table
+- timer
+end note
+
+Pantry -> Kettle: Fill kettle and boil water\nT: 00:00:00, t: 00:03:00, M: ~500 ml water, A: to a boil, E: timer
+Pantry -> Strainer: Rinse quinoa thoroughly\nT: 00:03:00, t: 00:02:00, M: ~170 g quinoa, A: under cold running water, E:
+Kettle -> Pot: Pour boiling water into pot\nT: 00:05:00, t: 00:00:30, M: ~360 ml water, A: carefully, E:
+Strainer -> Pot: Add rinsed quinoa to pot\nT: 00:05:30, t: 00:00:30, M: ~170 g quinoa, A:, E:
+Pantry -> Pot: Add pinch of salt (optional)\nT: 00:06:00, t: 00:00:10, M: ~1 g salt (optional), A:, E:
+Pot -> Hob: Bring to boil, then reduce to simmer and cook quinoa\nT: 00:06:10, t: 00:15:00, M: quinoa + water, A: covered until tender, E: lid on; timer
+Pot -> Table: Fluff cooked quinoa and cool slightly\nT: 00:21:10, t: 00:02:00, M: cooked quinoa (~450 g), A: gently, E:
+
+== Preheat Oven + Prep Peppers ==
+note over Table #FFF9E6
+T: 00:06:10
+Ingredients (with measures):
+- Bell peppers: 4 large
+- Olive oil: optional drizzle (~5 ml) for baking dish
+end note
+note over Table #E0F7FF
+Equipment:
+- Oven
+- PrepBoard
+- Table
+- baking dish
+- spoon
+end note
+
+Oven -> Oven: Preheat oven to 200°C (400°F)\nT: 00:06:10, t: 00:10:00, M:, A: preheat fully, E: timer
+Pantry -> PrepBoard: Slice bell peppers in half lengthwise and remove seeds\nT: 00:08:00, t: 00:05:00, M: 4 large bell peppers, A: carefully; keep halves intact, E:
+Pantry -> Table: Lightly oil baking dish (optional)\nT: 00:13:00, t: 00:00:30, M: ~5 ml olive oil (optional), A: thin coat, E:
+PrepBoard -> Table: Arrange pepper halves cut-side up in baking dish\nT: 00:13:30, t: 00:01:00, M: 8 pepper halves, A: evenly spaced, E:
+
+== Chop + Assemble Filling ==
+note over Table #FFF9E6
+T: 00:14:30
+Ingredients (with measures):
+- Cooked quinoa: ~450 g (from ~170 g dry)
+- Chickpeas: 1 can (~400 g), drained & rinsed (~240 g drained)
+- Red onion: 1/2 medium (~75 g), diced
+- Parsley: ~15 g (1/2 cup), chopped
+- Baby tomatoes: ~150 g (1 cup), diced
+- Sun-dried tomatoes: ~50 g (1/3 cup), chopped
+- Lemon: 1/2 large (juice ~30 ml)
+- Feta: ~170 g (6 oz), crumbled
+- Salt: ~3 g (1/2 tsp)
+- Dried oregano: ~3 g (1 Tbsp)
+- Black pepper: ~1 g (1/2 tsp)
+end note
+note over Table #E0F7FF
+Equipment:
+- Pantry
+- Refrigerator
+- PrepBoard
+- Bowl
+- Strainer
+- Table
+- spoon
+end note
+
+Pantry -> Strainer: Drain and rinse chickpeas\nT: 00:14:30, t: 00:01:00, M: 1 can chickpeas (~400 g), A: rinse until clean, E:
+Pantry -> PrepBoard: Dice red onion\nT: 00:15:30, t: 00:02:00, M: ~75 g red onion, A: small dice, E:
+Pantry -> PrepBoard: Chop parsley\nT: 00:17:30, t: 00:01:30, M: ~15 g parsley, A: roughly chopped, E:
+Pantry -> PrepBoard: Dice baby tomatoes\nT: 00:19:00, t: 00:02:00, M: ~150 g baby tomatoes, A: bite-size dice, E:
+Pantry -> PrepBoard: Chop sun-dried tomatoes\nT: 00:21:00, t: 00:01:00, M: ~50 g sun-dried tomatoes, A: finely chopped, E:
+Table -> Bowl: Add cooked quinoa to mixing bowl\nT: 00:22:00, t: 00:00:20, M: ~450 g cooked quinoa, A:, E:
+Strainer -> Bowl: Add chickpeas\nT: 00:22:20, t: 00:00:20, M: ~240 g drained chickpeas, A:, E:
+PrepBoard -> Bowl: Add onion, parsley, and tomatoes\nT: 00:22:40, t: 00:00:40, M: onion + parsley + tomatoes, A:, E:
+Pantry -> Bowl: Add sun-dried tomatoes\nT: 00:23:20, t: 00:00:20, M: ~50 g sun-dried tomatoes, A:, E:
+Pantry -> Bowl: Add oregano, salt, and black pepper\nT: 00:23:40, t: 00:00:20, M: ~3 g oregano; ~3 g salt; ~1 g pepper, A:, E:
+Pantry -> Bowl: Squeeze in lemon juice\nT: 00:24:00, t: 00:00:30, M: ~30 ml lemon juice (1/2 lemon), A: squeeze and remove seeds, E:
+Refrigerator -> Bowl: Add crumbled feta\nT: 00:24:30, t: 00:00:20, M: ~170 g feta, A:, E:
+Bowl -> Bowl: Mix filling until evenly combined\nT: 00:24:50, t: 00:01:10, M: full filling mixture, A: gently to keep texture, E: spoon
+
+== Stuff + Bake ==
+note over Table #FFF9E6
+T: 00:26:00
+Ingredients (with measures):
+- Pepper halves: 8 (from 4 large peppers)
+- Filling mixture: all prepared (quinoa + chickpeas + veg + feta + seasonings)
+end note
+note over Table #E0F7FF
+Equipment:
+- Table
+- Bowl
+- Oven
+- baking dish
+- spoon
+- timer
+end note
+
+Bowl -> Table: Spoon filling into pepper halves\nT: 00:26:00, t: 00:04:00, M: all filling, A: pack firmly but not crushing, E: spoon
+Table -> Oven: Bake stuffed peppers\nT: 00:30:00, t: 00:22:00, M: stuffed peppers in baking dish, A: until peppers are tender, E: timer
+
+== Yogurt Dill Sauce + Serve ==
+note over Table #FFF9E6
+T: 00:31:00
+Ingredients (with measures):
+- Plain Greek yogurt: ~240 g (1 cup)
+- Dried dill: ~2 g (2 tsp)
+- Lemon: 1/2 (juice ~30 ml)
+- Salt & pepper: pinch each (~0.5 g total)
+- Olive oil: ~15–30 ml (1–2 Tbsp) to thin
+end note
+note over Table #E0F7FF
+Equipment:
+- Refrigerator
+- Pantry
+- Bowl
+- Table
+- fork/whisk
+end note
+
+Refrigerator -> Bowl: Add Greek yogurt\nT: 00:31:00, t: 00:00:20, M: ~240 g Greek yogurt, A:, E:
+Pantry -> Bowl: Add dried dill, salt, and pepper\nT: 00:31:20, t: 00:00:20, M: ~2 g dill; pinch salt & pepper, A:, E:
+Pantry -> Bowl: Squeeze in lemon juice\nT: 00:31:40, t: 00:00:20, M: ~30 ml lemon juice (1/2 lemon), A: remove seeds, E:
+Bowl -> Bowl: Whisk sauce smooth\nT: 00:32:00, t: 00:00:40, M: yogurt + seasonings, A: until creamy, E: fork/whisk
+Pantry -> Bowl: Stream in olive oil to desired consistency\nT: 00:32:40, t: 00:00:40, M: ~15–30 ml olive oil, A: slowly while whisking, E:
+Oven -> Table: Remove peppers and rest briefly\nT: 00:52:00, t: 00:02:00, M: baked stuffed peppers, A: cool slightly, E:
+Table -> Table: Serve peppers with yogurt dill sauce\nT: 00:54:00, t: 00:01:00, M: sauce as needed, A: drizzle or dollop, E:
+
+@enduml

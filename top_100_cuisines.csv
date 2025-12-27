@@ -1,0 +1,101 @@
+id,country_or_region,cuisine,example_dishes
+1,Italy,Italian (General),Spaghetti carbonara; Margherita pizza; Lasagne
+2,Italy,Neapolitan,Neapolitan pizza; Pasta alla genovese; Frittatina di pasta
+3,Italy,Tuscan,Bistecca alla fiorentina; Ribollita; Pappa al pomodoro
+4,France,French (Classic),Coq au vin; Boeuf bourguignon; Ratatouille
+5,France,Provençal,Bouillabaisse; Tapenade; Pissaladière
+6,Spain,Spanish (General),Tortilla española; Croquetas; Gazpacho
+7,Spain,Basque,Pintxos; Marmitako; Basque cheesecake
+8,Spain,Catalan,Pa amb tomàquet; Fideuà; Crema catalana
+9,Mexico,Mexican (General),Tacos al pastor; Enchiladas; Chiles rellenos
+10,Mexico,Oaxacan,Mole negro; Tlayudas; Memelas
+11,Mexico,Yucatecan,Cochinita pibil; Sopa de lima; Panuchos
+12,China,Chinese (General),Kung Pao chicken; Fried rice; Spring rolls
+13,China,Sichuan,Mapo tofu; Kung Pao chicken; Dan dan noodles
+14,China,Cantonese,Char siu; Dim sum; Steamed fish with ginger
+15,China,Hunan,Chairman Mao’s red-braised pork; Spicy fish; Stir-fried chili chicken
+16,Japan,Japanese (General),Sushi; Tempura; Miso soup
+17,Japan,Izakaya-style,Yakitori; Karaage; Agedashi tofu
+18,Japan,Ramen-focused,Tonkotsu ramen; Shoyu ramen; Miso ramen
+19,India,North Indian / Punjabi,Butter chicken; Dal makhani; Naan
+20,India,South Indian,Masala dosa; Sambar; Idli
+21,India,Hyderabadi,Hyderabadi biryani; Mirchi ka salan; Double ka meetha
+22,India,Bengali,Fish curry; Shorshe ilish; Mishti doi
+23,Thailand,Thai (Central),Pad Thai; Green curry; Tom yum goong
+24,Thailand,Isan (Northeast Thai),Som tam; Larb; Gai yang
+25,Vietnam,Vietnamese (General),Pho; Banh mi; Bun cha
+26,Vietnam,Northern Vietnamese,Bun cha; Cha ca; Pho bo
+27,Vietnam,Southern Vietnamese,Hu tieu; Com tam; Banh xeo
+28,United States,American (Classic),Burgers; Fried chicken; Mac and cheese
+29,United States,Southern / Soul Food,Fried chicken; Collard greens; Cornbread
+30,United States,Cajun,Jambalaya; Gumbo; Crawfish étouffée
+31,United States,Tex-Mex,Fajitas; Chili con carne; Queso dip
+32,United States,BBQ (US Regional),Brisket; Pulled pork; Ribs
+33,United Kingdom,British (Traditional),Fish and chips; Shepherd’s pie; Roast dinner
+34,United Kingdom,Pub Grub / Gastropub,Steak and ale pie; Bangers and mash; Ploughman’s
+35,Greece,Greek,Moussaka; Souvlaki; Greek salad
+36,Turkey,Turkish,Doner kebab; Köfte; Menemen
+37,Lebanon,Lebanese,Hummus; Tabbouleh; Shawarma
+38,Middle East (General),Levantine / Mezze,Falafel; Baba ghanoush; Fattoush
+39,Israel,Israeli / Modern Middle Eastern,Shakshuka; Sabich; Hummus bowl
+40,Morocco,Moroccan,Tagine; Couscous; Pastilla
+41,Tunisia,Tunisian,Brik; Ojja; Couscous with harissa
+42,Egypt,Egyptian,Koshari; Ful medames; Ta’ameya
+43,Ethiopia,Ethiopian,Doro wat; Injera with wats; Misir wat
+44,Nigeria,Nigerian,Jollof rice; Suya; Egusi soup
+45,West Africa (Regional),West African (General),Jollof rice; Groundnut stew; Fried plantains
+46,South Africa,South African,Bobotie; Braai meats; Bunny chow
+47,Brazil,Brazilian,Feijoada; Pão de queijo; Moqueca
+48,Argentina,Argentinian,Asado; Empanadas; Milanesa
+49,Peru,Peruvian,Ceviche; Lomo saltado; Aji de gallina
+50,Chile,Chilean,Completo; Pastel de choclo; Cazuela
+51,Colombia,Colombian,Bandeja paisa; Arepas; Ajiaco
+52,Caribbean,Jamaican,Jerk chicken; Ackee and saltfish; Curry goat
+53,Caribbean,Trinidadian,Doubles; Roti; Pelau
+54,Caribbean (General),Caribbean (General),Rice and peas; Curried chicken; Fried plantain
+55,Korea,Korean,Bibimbap; Korean fried chicken; Kimchi jjigae
+56,Philippines,Filipino,Adobo; Sinigang; Lechon
+57,Indonesia,Indonesian,Nasi goreng; Satay; Gado-gado
+58,Malaysia,Malaysian,Nasi lemak; Char kway teow; Laksa
+59,Singapore,Singaporean / Hawker,Hainanese chicken rice; Chili crab; Laksa
+60,Sri Lanka,Sri Lankan,Rice and curry; Hoppers; Kottu roti
+61,Pakistan,Pakistani,Nihari; Biryani; Karahi
+62,Bangladesh,Bangladeshi,Hilsa fish curry; Kacchi biryani; Bhuna khichuri
+63,Iran,Persian / Iranian,Chelo kebab; Ghormeh sabzi; Fesenjan
+64,Iraq,Iraqi,Masgouf; Kibbeh; Tashreeb
+65,Afghanistan,Afghan,Kabuli pulao; Mantu; Bolani
+66,Russia,Russian,Borscht; Pelmeni; Beef stroganoff
+67,Georgia,Georgian,Khachapuri; Khinkali; Pkhali
+68,Poland,Polish,Pierogi; Bigos; Placki ziemniaczane
+69,Germany,German,Bratwurst; Schnitzel; Sauerkraut
+70,Austria,Austrian,Wiener schnitzel; Tafelspitz; Kaiserschmarrn
+71,Switzerland,Swiss,Fondue; Raclette; Rösti
+72,Belgium,Belgian,Moules-frites; Carbonnade flamande; Waffles
+73,Netherlands,Dutch,Stroopwafels; Bitterballen; Stamppot
+74,Scandinavia,Nordic / Scandinavian,Gravlax; Meatballs; Smørrebrød
+75,Sweden,Swedish (Specific),Swedish meatballs; Jansson’s temptation; Cinnamon buns
+76,Norway,Norwegian,Salmon; Kjøttkaker; Lefse
+77,Denmark,Danish,Smørrebrød; Frikadeller; Danish pastries
+78,Finland,Finnish,Karjalanpiirakka; Salmon soup; Korvapuusti
+79,Ireland,Irish,Irish stew; Boxty; Soda bread
+80,Portugal,Portuguese,Bacalhau; Pastéis de nata; Caldo verde
+81,Eastern Europe,Balkan (General),Ćevapi; Burek; Shopska salad
+82,Serbia,Serbian,Ćevapi; Pljeskavica; Sarma
+83,Croatia,Croatian / Dalmatian,Black risotto; Peka; Pašticada
+84,Czech Republic,Czech,Goulash; Svíčková; Knedlíky
+85,Hungary,Hungarian,Goulash; Paprikash; Lángos
+86,Alps Region,Alpine / Mountain,Cheese fondue; Rösti; Tiroler gröstl
+87,Gulf States,Gulf / Khaleeji,Machboos; Harees; Grilled kebabs
+88,China (Street),Chinese Street Food,Jianbing; Roujiamo; Baozi
+89,Japan (Street),Japanese Street Food,Takoyaki; Okonomiyaki; Taiyaki
+90,Global,Vegetarian / Plant-based,Veggie curry; Lentil stew; Stuffed peppers
+91,Global,Vegan (Global),Vegan burrito; Tofu stir-fry; Buddha bowl
+92,Global,Mediterranean (Healthy),Grilled fish; Greek salad; Hummus platter
+93,Global,Seafood-focused,Grilled salmon; Seafood paella; Fish tacos
+94,Global,Street Food (Global),Tacos; Kebabs; Bao
+95,Global,Comfort Food (Global),Mac and cheese; Cottage pie; Chicken pot pie
+96,Global,Sandwiches & Burgers,Club sandwich; Gourmet burger; Pulled pork sandwich
+97,Global,Pizza Night,Margherita; Pepperoni; Veggie supreme
+98,Global,Salad Bowls,Cobb salad; Poke bowl; Grain bowl
+99,Global,Soup Night,Chicken noodle soup; Minestrone; Ramen-style noodle soup
+100,Global,Rice Bowl Night,Bibimbap-style bowl; Teriyaki chicken rice; Burrito bowl

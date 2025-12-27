@@ -1,0 +1,60 @@
+You are generating a PlantUML SEQUENCE DIAGRAM for a recipe.
+
+OUTPUT REQUIREMENTS (NON-NEGOTIABLE):
+1) Output ONLY a single PlantUML diagram in one code block that starts with @startuml and ends with @enduml. No explanation text.
+2) The diagram title must be: "<RECIPE_NAME> - Station Sequence Diagram (Stations as Actors)".
+3) Actors are STATIONS (equipment/work areas), not people. Reuse the station list below; add more only if required by the recipe.
+4) The recipe must be decomposed into high-level SECTIONS using PlantUML section headers:
+   == Section Name ==
+5) Immediately under EACH section header, insert TWO notes:
+   A) Ingredients note with background color #FFF9E6
+   B) Equipment note with background color #E0F7FF
+6) Each section’s Ingredients note MUST include:
+   - "T: HH:MM:SS" initiation time for the section (the start time of the first step in that section)
+   - "Ingredients (with measures):" list with quantities and units for each ingredient referenced in that section
+7) Each section’s Equipment note MUST include:
+   - "Equipment:" list (station names + any extra equipment like "timer", "ladle", etc.)
+8) Each action line MUST be a PlantUML message line in this exact format:
+   StationA -> StationB: Action text\nT: t0, t, M:m u, A:a, E:e
+   where:
+   - t0 = start time of the step (HH:MM:SS), relative to recipe start 00:00:00
+   - t  = duration of the step (HH:MM:SS)
+   - M  = measured quantity and units (e.g., "500 g pork belly", "2 Tbsp miso", "900 ml stock")
+   - A  = optional adverb/adjective for qualitative detail (e.g., "finely", "gently", "until fragrant"); leave blank if none
+   - E  = optional equipment notes (e.g., "timer", "lid on", "cast iron optional"); leave blank if none
+9) IMPORTANT: Knife and cutting board are NOT separate stations. Use a single station called PrepBoard for all knife/cutting-board work.
+10) Use a realistic workflow with parallelizable prep grouped into earlier sections, but keep a single linear sequence in the diagram (no concurrency syntax).
+11) Maintain boil/simmer semantics: if timing depends on “returns to boil,” reflect it in step wording and durations.
+12) Prefer metric units; include common package measures if given. If the recipe provides US units only, convert approximately to metric AND keep the original in parentheses.
+13) If the recipe omits quantities for a topping or optional item, choose sensible defaults for 2 servings (or stated servings) and mark as "optional" where appropriate.
+14) Keep station names consistent across the whole diagram. Define participants at top. Include these participants (and add more only if needed):
+
+STATION PARTICIPANTS TO INCLUDE:
+participant Refrigerator
+participant Pantry
+participant PrepBoard
+participant Skillet
+participant Pot
+participant Hob
+participant Oven
+participant Kettle
+participant Bowl
+participant Strainer
+participant Table
+
+TIMING / STRUCTURE RULES:
+- Recipe start is 00:00:00.
+- Times should be plausible and consistent (later steps start after earlier ones, unless you explicitly model waiting in duration).
+- If the recipe involves long marination, cooling, resting, or chilling, model it as a step with a long duration and the correct stations.
+
+INPUTS YOU WILL RECEIVE:
+A) SERVINGS: <SERVINGS or "unknown">
+B) RECIPE NAME: <RECIPE_NAME>
+C) RAW RECIPE TEXT: <PASTE_RECIPE_TEXT_HERE>
+
+YOUR TASK:
+- Parse the raw recipe text into stations, sections, steps, ingredients, and equipment.
+- Produce the PlantUML diagram meeting all requirements above.
+- Preserve the style of the example: action text on first line, the T/M/A/E metadata on the second line using "\n".
+
+Now generate the PlantUML.
