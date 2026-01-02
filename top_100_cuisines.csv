@@ -10,7 +10,7 @@ id,country_or_region,cuisine,example_dishes
 9,Mexico,Mexican (General),Tacos al pastor; Enchiladas; Chiles rellenos
 10,Mexico,Oaxacan,Mole negro; Tlayudas; Memelas
 11,Mexico,Yucatecan,Cochinita pibil; Sopa de lima; Panuchos
-12,China,Chinese (General),Kung Pao chicken; Fried rice; Spring rolls
+12,China,Chinese (General), Pao chicken; Fried rice; Spring rolls
 13,China,Sichuan,Mapo tofu; Kung Pao chicken; Dan dan noodles
 14,China,Cantonese,Char siu; Dim sum; Steamed fish with ginger
 15,China,Hunan,Chairman Mao’s red-braised pork; Spicy fish; Stir-fried chili chicken

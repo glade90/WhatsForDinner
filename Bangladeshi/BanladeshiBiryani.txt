@@ -1,0 +1,228 @@
+@startuml
+title Kacchi Mutton Biryani (Dhaka style mutton and rice layers) - Station Sequence Diagram (Stations as Actors)
+
+participant Refrigerator
+participant Pantry
+participant PrepBoard
+participant Skillet
+participant Pot
+participant Hob
+participant Oven
+participant Kettle
+participant Bowl
+participant Strainer
+participant Table
+
+== Brine + initial prep (overnight) ==
+
+note over Bowl #FFF9E6
+T: 00:00:00
+Ingredients (with measures):
+- 1.5 kg mutton, bite-size chunks
+- 2 tsp salt (for brine; "generous" per recipe)
+- ~2.5 L cold water (enough to submerge; approximate)
+end note
+
+note over Bowl #E0F7FF
+Equipment:
+- Bowl (large), PrepBoard, Refrigerator
+- Measuring spoons, timer
+end note
+
+Refrigerator -> PrepBoard: Retrieve mutton from fridge\nT: 00:00:00, 00:00:30, M:1.5 kg mutton, A:, E:
+PrepBoard -> Bowl: Add mutton to brining bowl\nT: 00:00:30, 00:00:30, M:1.5 kg mutton, A:, E:
+Pantry -> Bowl: Add salt and water to brine\nT: 00:01:00, 00:01:00, M:2 tsp salt + ~2.5 L water, A:thoroughly mixed, E:
+Bowl -> Refrigerator: Brine (rest chilled)\nT: 00:02:00, 12:00:00, M:brining bowl, A:overnight, E:covered
+
+== Spice mix + marinade build ==
+
+note over Bowl #FFF9E6
+T: 12:02:00
+Ingredients (with measures):
+- 250 ml natural yoghurt
+- 2 Tbsp garlic & ginger paste
+- 250 ml tomatoes, pureed
+- 1 tsp turmeric
+- 2 tsp red chilli powder
+- 1 Tbsp garam masala
+- 1 tsp salt (remaining salt to taste; approximate)
+- Beresta (crispy fried onions), half (see next section)
+end note
+
+note over Bowl #E0F7FF
+Equipment:
+- PrepBoard, Bowl, Skillet, Strainer
+- Spoon/spatula, measuring spoons
+end note
+
+Refrigerator -> PrepBoard: Remove brined mutton; rinse and drain\nT: 12:02:00, 00:08:00, M:1.5 kg mutton, A:well rinsed, E:
+PrepBoard -> Bowl: Combine yoghurt, paste, tomatoes, powdered spices\nT: 12:10:00, 00:03:00, M:yoghurt 250 ml + tomatoes 250 ml + spices, A:smoothly mixed, E:
+Bowl -> Bowl: Add drained mutton to marinade base\nT: 12:13:00, 00:02:00, M:1.5 kg mutton, A:evenly coated, E:
+Bowl -> Refrigerator: Rest marinated mutton\nT: 12:15:00, 02:00:00, M:marinating bowl, A:chilled, E:covered
+
+== Beresta (crispy fried onions) ==
+
+note over Skillet #FFF9E6
+T: 12:20:00
+Ingredients (with measures):
+- 3–4 onions, finely sliced
+- 500 ml vegetable oil (for frying)
+- 2–3 tsp mustard oil (optional, for flavour)
+- Pinch of salt (for onions)
+end note
+
+note over Skillet #E0F7FF
+Equipment:
+- PrepBoard, Skillet, Hob, Strainer, Bowl
+- Slotted spoon, paper towel, timer
+end note
+
+Pantry -> PrepBoard: Gather onions + oils + salt\nT: 12:20:00, 00:00:30, M:3–4 onions + oils, A:, E:
+PrepBoard -> PrepBoard: Slice onions very thinly\nT: 12:20:30, 00:08:00, M:3–4 onions, A:finely, E:
+Pantry -> Skillet: Add vegetable oil (+ mustard oil optional)\nT: 12:28:30, 00:00:30, M:500 ml oil (+ 2–3 tsp optional), A:, E:
+Skillet -> Hob: Heat oil to medium-high (then lower)\nT: 12:29:00, 00:03:00, M:hot oil, A:carefully, E:
+PrepBoard -> Skillet: Add sliced onions + pinch salt\nT: 12:32:00, 00:00:30, M:3–4 onions, A:in batches, E:
+Skillet -> Hob: Fry onions until browned (stir constantly)\nT: 12:32:30, 00:10:00, M:onions frying, A:constantly stirring, E:timer
+Skillet -> Strainer: Drain beresta on paper towel\nT: 12:42:30, 00:02:00, M:beresta batch, A:well drained, E:
+Strainer -> Bowl: Reserve half beresta for marinade; half for topping\nT: 12:44:30, 00:01:00, M:beresta (50/50 split), A:, E:
+Bowl -> Bowl: Fold half beresta into mutton marinade\nT: 12:45:30, 00:01:00, M:½ beresta, A:gently, E:
+Bowl -> Refrigerator: Return marinated mutton (with beresta)\nT: 12:46:30, 01:28:30, M:marinating bowl, A:chilled, E:covered
+
+== Rice wash + parboil with whole spices ==
+
+note over Pot #FFF9E6
+T: 12:30:00
+Ingredients (with measures):
+- 500 g extra-long basmati rice
+- Salt, to taste (assume ~2 tsp for boiling water)
+- 1 Tbsp oil (preferably reserved onion-frying oil)
+- 1 tsp cumin seeds (shah jeera preferred)
+- 4 cardamom pods, crushed
+- 2 cinnamon sticks (~4 cm each)
+- 1 star anise
+- 2–3 bay leaves, snapped
+- 15 aloo bukhara (dried plums), soaked (1 per person)
+- 2.0 L water (or enough to cover rice + ~2 cm)
+end note
+
+note over Pot #E0F7FF
+Equipment:
+- Pot, Hob, Strainer, Bowl, PrepBoard
+- Measuring jug, spoon, timer
+end note
+
+Pantry -> Bowl: Soak aloo bukhara in warm water\nT: 12:30:00, 00:10:00, M:15 dried plums + ~500 ml warm water, A:, E:
+Pantry -> PrepBoard: Measure rice + whole spices\nT: 12:40:00, 00:02:00, M:500 g rice + whole spices set, A:, E:
+Pantry -> PrepBoard: Wash/rinse rice until water runs clear\nT: 12:42:00, 00:08:00, M:500 g rice, A:thoroughly, E:
+PrepBoard -> Bowl: Soak rinsed rice while meat marinates\nT: 12:50:00, 01:00:00, M:500 g rice + water, A:soaked, E:
+Pot -> Hob: Bring 2.0 L water to a boil\nT: 13:50:00, 00:10:00, M:2.0 L water, A:rolling boil, E:lid on
+Pantry -> Pot: Add salt, oil, whole spices, soaked plums\nT: 14:00:00, 00:01:00, M:salt ~2 tsp + 1 Tbsp oil + spices + 15 plums, A:, E:
+Bowl -> Pot: Drain soaked rice and add to boiling spiced water\nT: 14:01:00, 00:01:00, M:500 g rice, A:gently, E:
+Pot -> Hob: Stir; cover halfway; reduce once frothing returns\nT: 14:02:00, 00:10:00, M:parboiling rice, A:carefully, E:watch for re-boil
+Pot -> Strainer: Drain rice when grains hold shape (par-cooked)\nT: 14:12:00, 00:02:00, M:parboiled rice, A:quickly, E:
+Strainer -> Bowl: Hold drained rice for layering\nT: 14:14:00, 00:01:00, M:drained rice, A:fluffed, E:
+
+== Potatoes (or eggs) prep + fry ==
+
+note over Skillet #FFF9E6
+T: 14:00:00
+Ingredients (with measures):
+- 8 medium potatoes (≈½ per person), peeled & halved (chosen option)
+- Salt, to taste (assume ~2 tsp total)
+- Turmeric, <½ tsp (for colour)
+- Red chilli powder, <½ tsp (for colour)
+- Frying oil: use same onion oil (as needed; assume ~150 ml reserved)
+end note
+
+note over Skillet #E0F7FF
+Equipment:
+- Pot, Hob, Skillet, Strainer, PrepBoard
+- Timer, slotted spoon
+end note
+
+Pantry -> PrepBoard: Gather potatoes + seasonings\nT: 14:00:00, 00:01:00, M:8 potatoes + spices, A:, E:
+PrepBoard -> PrepBoard: Peel and halve potatoes\nT: 14:01:00, 00:10:00, M:8 potatoes, A:evenly, E:
+Pot -> Hob: Parboil potatoes until just tender\nT: 14:11:00, 00:12:00, M:8 potato halves + water, A:gentle boil, E:timer
+Pot -> Strainer: Drain parboiled potatoes\nT: 14:23:00, 00:01:00, M:8 potato halves, A:well drained, E:
+PrepBoard -> PrepBoard: Season potatoes with salt/turmeric/chilli\nT: 14:24:00, 00:01:00, M:potatoes + <½ tsp turmeric + <½ tsp chilli, A:lightly dusted, E:
+Skillet -> Hob: Heat reserved oil (from onions)\nT: 14:25:00, 00:02:00, M:~150 ml oil (as needed), A:hot, E:
+PrepBoard -> Skillet: Fry potatoes until lightly golden\nT: 14:27:00, 00:06:00, M:8 potato halves, A:lightly, E:
+Skillet -> Strainer: Drain fried potatoes\nT: 14:33:00, 00:01:00, M:fried potatoes, A:, E:
+
+== Saffron soak + oil-water mix for finishing ==
+
+note over Bowl #FFF9E6
+T: 14:10:00
+Ingredients (with measures):
+- Saffron strands, a few (assume ~0.2 g)
+- 100 ml warm water (for saffron soak; approximate)
+- 250 ml water (for rice finishing splash; "cup of water")
+- 50 ml oil (a few teaspoons scaled; approximate)
+end note
+
+note over Bowl #E0F7FF
+Equipment:
+- Bowl, Kettle, PrepBoard
+- Pestle & mortar (optional), spoon
+end note
+
+Kettle -> Bowl: Add warm water for saffron\nT: 14:10:00, 00:00:30, M:100 ml warm water, A:warm not boiling, E:
+Pantry -> Bowl: Soak saffron; grind if desired\nT: 14:10:30, 00:10:00, M:saffron ~0.2 g, A:gently infused, E:pestle optional
+Pantry -> Bowl: Mix oil + water splash for rice\nT: 14:20:30, 00:01:00, M:50 ml oil + 250 ml water, A:emulsified, E:
+
+== Assemble layers + dum bake (oven) ==
+
+note over Pot #FFF9E6
+T: 14:35:00
+Ingredients (with measures):
+- Marinated mutton (1.5 kg) + full marinade
+- Parboiled spiced rice (500 g dry basis)
+- Beresta (remaining half)
+- Fried potatoes (8 halves)
+- Mint leaves, generous handful (assume ~30 g), chopped
+- Cashews, small handful (assume ~50 g), lightly toasted
+- Aloo bukhara (15), from rice pot
+- Saffron water (100 ml, infused)
+- Oil-water mix (50 ml oil + 250 ml water)
+end note
+
+note over Pot #E0F7FF
+Equipment:
+- Oven, Pot (ovenproof stock pot / dutch oven), PrepBoard
+- Spoon, ladle, foil + lid (seal), timer
+end note
+
+Oven -> Oven: Preheat oven to 160C\nT: 14:35:00, 00:15:00, M:160C oven, A:preheated, E:
+Refrigerator -> PrepBoard: Retrieve marinated mutton\nT: 14:35:30, 00:00:30, M:1.5 kg marinated mutton, A:, E:
+PrepBoard -> Pot: Layer 1: add half marinated mutton to pot\nT: 14:36:00, 00:02:00, M:~750 g marinated mutton, A:even layer, E:
+Bowl -> Pot: Layer 2: add portion of rice over meat\nT: 14:38:00, 00:02:00, M:~½ parboiled rice, A:evenly spread, E:
+Strainer -> Pot: Add potatoes + some beresta + plums\nT: 14:40:00, 00:02:00, M:4 potato halves + beresta portion + plums, A:scattered, E:
+Pantry -> Pot: Add mint + cashews between layers\nT: 14:42:00, 00:01:00, M:mint ~15 g + cashews ~25 g, A:evenly, E:
+PrepBoard -> Pot: Repeat layers: remaining mutton, rice, potatoes, beresta, mint, cashews\nT: 14:43:00, 00:05:00, M:remaining components, A:layered, E:
+PrepBoard -> Pot: Poke holes down to bottom for steam paths\nT: 14:48:00, 00:01:00, M:steam holes, A:carefully, E:spoon handle
+Bowl -> Pot: Pour oil-water mix; drizzle saffron water\nT: 14:49:00, 00:01:00, M:250 ml water + 50 ml oil + 100 ml saffron water, A:evenly distributed, E:
+PrepBoard -> Pot: Seal pot (lid + foil) for dum\nT: 14:50:00, 00:02:00, M:sealed pot, A:tightly sealed, E:foil + lid
+Pot -> Oven: Bake on dum for 1.5 hours\nT: 14:52:00, 01:30:00, M:sealed biryani pot, A:slowly cooked, E:timer
+
+== Finish + serve ==
+
+note over Table #FFF9E6
+T: 16:22:00
+Ingredients (with measures):
+- Final topping mint (~15 g)
+- Remaining beresta (as needed)
+- Final potato layer (if reserved; optional)
+end note
+
+note over Table #E0F7FF
+Equipment:
+- Oven, Pot, Table
+- Serving spoon, heatproof gloves
+end note
+
+Oven --> Pot: Remove biryani pot from oven\nT: 16:22:00, 00:01:00, M:hot pot, A:carefully, E:heatproof gloves
+Pot -> PrepBoard: Rest briefly before opening\nT: 16:23:00, 00:10:00, M:rested pot, A:covered, E:
+PrepBoard -> Pot: Unseal lid/foil; add final mint + beresta\nT: 16:33:00, 00:02:00, M:mint ~15 g + beresta, A:fragrant garnish, E:
+Pot -> Table: Serve biryani immediately\nT: 16:35:00, 00:05:00, M:serves ~15, A:hot, E:large serving spoon
+
+@enduml

@@ -1,0 +1,192 @@
+@startuml
+title Bangladeshi Feast (Shorshe Ilish + Kalijeera Rice + Aloo Bhorta + Salad + Mishti Doi) - Station Sequence Diagram (Stations as Actors)
+
+participant Refrigerator
+participant Pantry
+participant PrepBoard
+participant Skillet
+participant Pot
+participant Hob
+participant Oven
+participant Kettle
+participant Bowl
+participant Strainer
+participant Table
+
+== Day-before optional: Thaw hilsa safely ==
+
+note over Refrigerator #FFF9E6
+T: 00:00:00
+Ingredients (with measures):
+- 1.0–1.2 kg hilsa (ilish), frozen (whole or steaks)
+end note
+
+note over Refrigerator #E0F7FF
+Equipment:
+- Refrigerator, Bowl
+- Tray/plate (optional), timer
+end note
+
+Freezer -> Refrigerator: (If available) Move hilsa to fridge to thaw\nT: 00:00:00, 00:02:00, M:1.0–1.2 kg hilsa, A:still sealed, E:tray underneath
+Refrigerator -> Refrigerator: Thaw slowly in fridge\nT: 00:02:00, 20:00:00, M:thawing fish, A:slowly, E:keep chilled
+
+== Mise en place: Mustard paste + veg prep ==
+
+note over PrepBoard #FFF9E6
+T: 20:02:00
+Ingredients (with measures):
+- 60 g yellow mustard seeds (or 4 Tbsp)
+- 2–3 green chillies
+- 120 ml water (for soaking + blending; as needed)
+- 1/2 tsp salt (for paste; adjust later)
+- 1/4 tsp turmeric (for paste; optional)
+- 1 clove garlic (optional)
+- 10 g ginger (optional)
+- Salad: 1 cucumber, 2 tomatoes, 1/2 red onion, 1 lemon
+end note
+
+note over PrepBoard #E0F7FF
+Equipment:
+- Pantry, PrepBoard, Bowl
+- Spoon, measuring spoons
+end note
+
+Pantry -> Bowl: Soak mustard seeds in warm water\nT: 20:02:00, 00:15:00, M:60 g mustard + 120 ml water, A:warm soak, E:
+PrepBoard -> PrepBoard: Slice cucumber, tomatoes, red onion for salad\nT: 20:02:30, 00:10:00, M:1 cucumber + 2 tomatoes + 1/2 onion, A:thinly, E:
+Bowl -> PrepBoard: Drain soaked mustard; reserve a little soaking water\nT: 20:17:00, 00:01:00, M:soaked mustard, A:well drained, E:
+PrepBoard -> Bowl: Make mustard paste (crush/grind with chilli + water)\nT: 20:18:00, 00:05:00, M:mustard 60 g + 2–3 chillies + ~60 ml water, A:smooth, E:add water gradually
+Bowl -> Bowl: Season mustard paste lightly (salt; optional turmeric)\nT: 20:23:00, 00:01:00, M:1/2 tsp salt + 1/4 tsp turmeric, A:gently mixed, E:
+
+== Rice: Kalijeera rice (or basmati) ==
+
+note over Pot #FFF9E6
+T: 20:05:00
+Ingredients (with measures):
+- 400 g kalijeera rice (or basmati)
+- 700 ml water (approx; adjust for rice type)
+- 1 tsp salt
+- 10 ml mustard oil or 15 g ghee (optional)
+- 1 bay leaf (optional)
+end note
+
+note over Pot #E0F7FF
+Equipment:
+- Pot, Hob, Strainer, PrepBoard
+- Measuring jug, timer, lid
+end note
+
+Pantry -> PrepBoard: Measure rice; rinse until water mostly clear\nT: 20:05:00, 00:05:00, M:400 g rice, A:thoroughly, E:
+PrepBoard -> Strainer: Drain rinsed rice\nT: 20:10:00, 00:01:00, M:rinsed rice, A:well drained, E:
+Strainer -> Pot: Add rice + water + salt (+ bay leaf)\nT: 20:11:00, 00:01:00, M:400 g rice + 700 ml water + 1 tsp salt, A:, E:
+Pot -> Hob: Bring rice to a boil, uncovered\nT: 20:12:00, 00:06:00, M:rice pot, A:watch closely, E:
+Hob --> Pot: Rice returns to boil (bubbles across surface)\nT: 20:18:00, 00:00:10, M:boiling state, A:, E:
+Pot -> Hob: Cover; reduce to low; simmer until absorbed\nT: 20:18:10, 00:12:00, M:covered simmer, A:gentle, E:lid on
+Pot -> Hob: Rest off heat (steam finish)\nT: 20:30:10, 00:10:00, M:rested rice, A:undisturbed, E:lid on
+Pot -> Pot: Fluff rice (+ optional mustard oil/ghee)\nT: 20:40:10, 00:01:00, M:10 ml mustard oil (optional), A:lightly, E:
+
+== Aloo Bhorta (mustard-oil mashed potato) ==
+
+note over Pot #FFF9E6
+T: 20:08:00
+Ingredients (with measures):
+- 900 g potatoes (about 4 large)
+- 15 g salt (for boiling water; approx)
+- 1 red onion (small), finely chopped
+- 2 green chillies, chopped
+- 30 ml mustard oil
+- 1/2 tsp salt (to finish; adjust)
+- 10 g fresh coriander (optional)
+end note
+
+note over Pot #E0F7FF
+Equipment:
+- Pot, Hob, Strainer, PrepBoard, Bowl
+- Potato masher (optional), timer
+end note
+
+Pantry -> PrepBoard: Peel and quarter potatoes\nT: 20:08:00, 00:08:00, M:900 g potatoes, A:even chunks, E:
+PrepBoard -> Pot: Add potatoes + water + salt\nT: 20:16:00, 00:01:00, M:potatoes + water + ~15 g salt, A:, E:
+Pot -> Hob: Boil potatoes until tender\nT: 20:17:00, 00:18:00, M:boiling potatoes, A:rolling boil, E:timer
+Pot -> Strainer: Drain potatoes very well\nT: 20:35:00, 00:01:00, M:drained potatoes, A:steamy dry, E:
+Strainer -> Bowl: Mash potatoes (rough texture is OK)\nT: 20:36:00, 00:03:00, M:900 g potatoes, A:rustic, E:masher optional
+PrepBoard -> Bowl: Add onion + chillies (+ coriander optional)\nT: 20:39:00, 00:02:00, M:1 onion + 2 chillies (+ 10 g coriander), A:finely chopped, E:
+Pantry -> Bowl: Add mustard oil + finishing salt; mix\nT: 20:41:00, 00:02:00, M:30 ml mustard oil + 1/2 tsp salt, A:thoroughly, E:
+
+== Shorshe Ilish (hilsa mustard curry) ==
+
+note over Skillet #FFF9E6
+T: 20:25:00
+Ingredients (with measures):
+- 1.0–1.2 kg hilsa, cut into 6–8 steaks (or purchased steaks)
+- 1 tsp turmeric (for fish)
+- 1 tsp salt (for fish; adjust)
+- 60 ml mustard oil (total)
+- 1/2 tsp nigella seeds (kalonji) OR 1 tsp panch phoron (optional)
+- Mustard paste (from earlier): ~120 ml (about 1/2 cup)
+- 250 ml water (to loosen gravy)
+- 4 green chillies, slit
+end note
+
+note over Skillet #E0F7FF
+Equipment:
+- PrepBoard, Skillet, Hob, Bowl
+- Fish slice/spatula, lid, timer
+end note
+
+Refrigerator -> PrepBoard: Retrieve hilsa; pat dry; cut into steaks if needed\nT: 20:25:00, 00:06:00, M:1.0–1.2 kg hilsa, A:gently, E:paper towel
+Pantry -> PrepBoard: Season fish with turmeric + salt\nT: 20:31:00, 00:02:00, M:1 tsp turmeric + 1 tsp salt, A:evenly coated, E:
+Pantry -> Skillet: Add mustard oil and heat until shimmering\nT: 20:33:00, 00:02:00, M:60 ml mustard oil, A:hot, E:ventilate
+Skillet -> Hob: Temper nigella seeds (or panch phoron) briefly\nT: 20:35:00, 00:00:20, M:1/2 tsp nigella (or 1 tsp panch phoron), A:briefly, E:
+PrepBoard -> Skillet: Add hilsa steaks; sear very lightly (optional)\nT: 20:35:20, 00:03:00, M:6–8 fish steaks, A:lightly, E:handle carefully
+Bowl -> Skillet: Add mustard paste + water to form gravy\nT: 20:38:20, 00:01:00, M:120 ml mustard paste + 250 ml water, A:stirred smooth, E:
+PrepBoard -> Skillet: Add slit green chillies; cover\nT: 20:39:20, 00:00:30, M:4 green chillies, A:, E:lid on
+Skillet -> Hob: Simmer gently until fish just cooked\nT: 20:39:50, 00:08:00, M:gentle simmer, A:do not over-stir, E:lid on
+Hob --> Skillet: Fish cooked; gravy thickened slightly\nT: 20:47:50, 00:00:10, M:just-flaking fish, A:, E:
+Skillet -> Hob: Rest off heat to settle gravy\nT: 20:48:00, 00:05:00, M:rested curry, A:undisturbed, E:
+
+== Salad + dessert set (cold side & finish) ==
+
+note over Bowl #FFF9E6
+T: 20:12:30
+Ingredients (with measures):
+- Salad: sliced cucumber, tomatoes, red onion (from earlier)
+- 1/2 tsp salt (to season salad)
+- 10 ml lemon juice (about 2 tsp)
+- Mishti doi: 4 servings (or 500 g sweet yoghurt)
+end note
+
+note over Bowl #E0F7FF
+Equipment:
+- Bowl, PrepBoard, Refrigerator, Table
+- Spoon
+end note
+
+PrepBoard -> Bowl: Toss salad with salt + lemon\nT: 20:12:30, 00:01:30, M:1/2 tsp salt + 10 ml lemon, A:lightly tossed, E:
+Bowl -> Refrigerator: Chill salad until serving\nT: 20:14:00, 00:35:00, M:salad bowl, A:chilled, E:covered
+Refrigerator -> Table: Set mishti doi in serving bowls (or keep in pot)\nT: 20:49:00, 00:02:00, M:500 g mishti doi, A:ready to serve, E:dessert bowls optional
+
+== Plate & serve ==
+
+note over Table #FFF9E6
+T: 20:53:00
+Ingredients (with measures):
+- Fluffed rice (400 g dry basis)
+- Shorshe ilish (1.0–1.2 kg fish + gravy)
+- Aloo bhorta (900 g potatoes)
+- Chilled salad (1 bowl)
+- Optional achar (as desired)
+end note
+
+note over Table #E0F7FF
+Equipment:
+- Table, Pot, Skillet, Bowl
+- Serving spoon, fish slice
+end note
+
+Pot -> Table: Spoon rice into serving bowl/plates\nT: 20:53:00, 00:02:00, M:rice for 4, A:fluffed, E:
+Skillet -> Table: Place hilsa on rice; spoon mustard gravy around\nT: 20:55:00, 00:03:00, M:6–8 fish pieces + gravy, A:gently, E:fish slice
+Bowl -> Table: Serve aloo bhorta alongside\nT: 20:58:00, 00:01:00, M:1 bowl bhorta, A:rustic mound, E:
+Refrigerator -> Table: Serve salad (+ achar optional)\nT: 20:59:00, 00:01:00, M:1 salad bowl (+ achar), A:crisp, E:
+Table -> Table: Eat main; finish with mishti doi\nT: 21:00:00, 00:20:00, M:dessert for 4, A:chilled, E:
+
+@enduml

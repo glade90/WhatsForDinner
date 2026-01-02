@@ -1,0 +1,64 @@
+@startuml
+title Bangladeshi Feast - Interaction / Phase Diagram (with Parallel Work)
+
+start
+
+:PHASE 0 (Optional, Day-before)\nMove hilsa to fridge to thaw;
+if (Hilsa frozen?) then (yes)
+  :Thaw slowly 18–24h in fridge;
+else (no)
+  :Skip thaw phase;
+endif
+
+:PHASE 1 (Mise en place)\nGather ingredients + equipment;
+
+fork
+  :Soak mustard seeds (15 min);
+  :Grind mustard paste + chillies;
+fork again
+  :Rinse rice;
+  :Set rice aside ready to cook;
+fork again
+  :Peel + chop potatoes;
+fork again
+  :Chop salad veg (cucumber/tomato/onion);
+  :Chill salad bowl (optional);
+end fork
+
+:PHASE 2 (Cook base carbs)\nStart rice + potatoes;
+
+fork
+  :Cook rice (boil -> simmer -> rest);
+fork again
+  :Boil potatoes until tender;
+  :Drain + steam-dry potatoes;
+end fork
+
+:PHASE 3 (Cook main)\nShorshe Ilish;
+
+:Heat mustard oil (to shimmering);
+:Temper nigella/panch phoron;
+:Add hilsa pieces (light sear optional);
+:Add mustard paste + water to gravy;
+:Simmer gently until fish just cooked;
+:Rest curry off heat (5 min);
+
+:PHASE 4 (Finish sides)\nBhorta + salad;
+
+fork
+  :Mash potatoes;
+  :Mix with onion + chilli + mustard oil;
+fork again
+  :Season salad with salt + lemon;
+end fork
+
+:PHASE 5 (Plate & serve)\nAssemble full meal;
+
+:Plate rice;
+:Top with hilsa + mustard gravy;
+:Add aloo bhorta on side;
+:Add salad + achar on table;
+:Serve mishti doi for dessert;
+
+stop
+@enduml
